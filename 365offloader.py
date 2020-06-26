@@ -28,7 +28,7 @@ staging_dir = r'tmp'
 exchange_folder = a.inbox / conf_folder  # folder inbox to read from under the inbox directory ex. Trash, Junk, etc.
 
 
-for item in exchange_folder.all()[:1]:
+for item in exchange_folder.all():
     for attachment in item.attachments:
         if isinstance(attachment, FileAttachment):
             if conf_attachment_file_name in attachment.name:
